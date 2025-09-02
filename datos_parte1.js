@@ -1,8 +1,3 @@
-¡Perfecto\! Iniciemos nuestro análisis.
-
-Aquí tienes el corpus de datos completo para los capítulos 1 a 4 de *De Bello Gallico*, estructurado según la plantilla que me proporcionaste. He desglosado cada oración, analizando cada palabra morfológica y sintácticamente, y he añadido traducciones y notas para una mayor claridad, como corresponde a nuestra clase.
-
-```javascript
 const corpus = {
     titulus_principalis: "De Bello Gallico, I, 1-4",
     auctor: "C. Iulius Caesar",
@@ -318,4 +313,3 @@ const corpus = {
         ]
     }
 };
-```
