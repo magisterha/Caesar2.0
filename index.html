@@ -7,24 +7,91 @@
     <link rel="stylesheet" href="estilos.css">
     <style>
         /* Estilos adicionales solo para el índice */
-        body { display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f3f0e9; }
-        .index-container { text-align: center; background-color: white; padding: 2rem 3rem; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f3f0e9; padding: 1rem; }
+        .index-container { text-align: center; background-color: white; padding: 2rem 3rem; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); max-width: 600px; width: 100%;}
         .index-container h1 { font-family: 'Georgia', 'Times New Roman', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: #333; }
         .index-list { list-style: none; padding: 0; }
         .index-list li { margin: 1rem 0; }
         .index-list a { text-decoration: none; color: #4a4a4a; font-size: 1.25rem; font-weight: 600; padding: 0.5rem 1rem; border: 2px solid #d6d3d1; border-radius: 0.25rem; transition: all 0.2s; display: block; }
         .index-list a:hover { background-color: #4a4a4a; color: white; border-color: #4a4a4a; }
+        
+        /* Ajustes para el selector de idioma en el índice */
+        #language-switcher { max-width: 300px; margin: 0 auto 1.5rem auto; }
     </style>
 </head>
 <body>
     <div class="index-container">
-        <h1>De Bello Gallico - Liber Primus</h1>
+        <div id="language-switcher" class="mb-4">
+            <button data-lang="es" class="lang-btn active-lang">Español</button>
+            <button data-lang="en" class="lang-btn">English</button>
+            <button data-lang="zh" class="lang-btn">中文 (繁體)</button>
+        </div>
+
+        <h1 id="main-title">De Bello Gallico - Liber Primus</h1>
         <ul class="index-list">
-            <li><a href="parte1.html">Parte 1: La Conspiración de Orgetórix (Cap. 1-4)</a></li>
-            <li><a href="parte2.html">Parte 2: La Migración de los Helvecios (Cap. 5-12)</a></li>
-            <li><a href="parte3.html">Parte 3: La Campaña contra los Helvecios (Cap. 13-29)</a></li>
-            <li><a href="parte4.html">Parte 4: La Campaña contra Ariovisto (Cap. 30-54)</a></li>
+            <li><a id="link-part1" href="parte1.html">Parte 1: La Conspiración de Orgetórix (Cap. 1-4)</a></li>
+            <li><a id="link-part2" href="parte2.html">Parte 2: La Migración de los Helvecios (Cap. 5-12)</a></li>
+            <li><a id="link-part3" href="parte3.html">Parte 3: La Campaña contra los Helvecios (Cap. 13-29)</a></li>
+            <li><a id="link-part4" href="parte4.html">Parte 4: La Campaña contra Ariovisto (Cap. 30-54)</a></li>
         </ul>
     </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Objeto con todas las traducciones
+    const translations = {
+        es: {
+            mainTitle: "De Bello Gallico - Liber Primus",
+            linkPart1: "Parte 1: La Conspiración de Orgetórix (Cap. 1-4)",
+            linkPart2: "Parte 2: La Migración de los Helvecios (Cap. 5-12)",
+            linkPart3: "Parte 3: La Campaña contra los Helvecios (Cap. 13-29)",
+            linkPart4: "Parte 4: La Campaña contra Ariovisto (Cap. 30-54)"
+        },
+        en: {
+            mainTitle: "The Gallic War - Book I",
+            linkPart1: "Part 1: The Conspiracy of Orgetorix (Ch. 1-4)",
+            linkPart2: "Part 2: The Migration of the Helvetii (Ch. 5-12)",
+            linkPart3: "Part 3: The Campaign against the Helvetii (Ch. 13-29)",
+            linkPart4: "Part 4: The Campaign against Ariovistus (Ch. 30-54)"
+        },
+        zh: {
+            mainTitle: "高盧戰記 - 卷一",
+            linkPart1: "第一部分：奧爾格托里克斯的陰謀 (1-4章)",
+            linkPart2: "第二部分：赫爾維蒂人的遷徙 (5-12章)",
+            linkPart3: "第三部分：對赫爾維蒂人的戰役 (13-29章)",
+            linkPart4: "第四部分：對阿里奧維斯圖的戰役 (30-54章)"
+        }
+    };
+
+    const langSwitcher = document.getElementById('language-switcher');
+    
+    // Función para cambiar el idioma
+    function changeLanguage(lang) {
+        // Actualizar los textos
+        document.getElementById('main-title').textContent = translations[lang].mainTitle;
+        document.getElementById('link-part1').textContent = translations[lang].linkPart1;
+        document.getElementById('link-part2').textContent = translations[lang].linkPart2;
+        document.getElementById('link-part3').textContent = translations[lang].linkPart3;
+        document.getElementById('link-part4').textContent = translations[lang].linkPart4;
+
+        // Actualizar el botón activo
+        langSwitcher.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.remove('active-lang');
+            if (btn.dataset.lang === lang) {
+                btn.classList.add('active-lang');
+            }
+        });
+    }
+
+    // Manejador de eventos para los botones
+    langSwitcher.addEventListener('click', (e) => {
+        if (e.target.tagName === 'BUTTON') {
+            const lang = e.target.dataset.lang;
+            changeLanguage(lang);
+        }
+    });
+});
+</script>
+
 </body>
 </html>
