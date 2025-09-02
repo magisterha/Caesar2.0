@@ -320,10 +320,10 @@ const corpus = {
                             { id_verbi: 'v8_19', terminus: 'et', analysis_morphologicus: "Conjunción ('y').", analysis_morphologicus_en: "Conjunction ('and').", analysis_morphologicus_zh: "連詞（「和」）。" },
                             { id_verbi: 'v8_20', terminus: 'septentriones.', analysis_morphologicus: "Sustantivo, masculino, plural, acusativo ('el norte').", analysis_morphologicus_en: "Noun, masculine, plural, accusative ('the north').", analysis_morphologicus_zh: "名詞，陽性，複數，賓格（「北方」）。" }
                         ]
-                    } 
-                ] 
-            }, 
-            {                           
+                    }
+                ]   
+            },
+            {
                 id_capituli: 2,
                 orationes: [
                     {
@@ -464,10 +464,10 @@ const corpus = {
                             { id_verbi: 'v11_48', terminus: 'Heluetiis', analysis_morphologicus: "Sustantivo, masculino, plural, ablativo.", analysis_morphologicus_en: "Noun, masculine, plural, ablative.", analysis_morphologicus_zh: "名詞，陽性，複數，離格。" },
                             { id_verbi: 'v11_49', terminus: 'diuidit.', analysis_morphologicus: "Verbo, 3ª pers. sing., presente, activo, indicativo.", analysis_morphologicus_en: "Verb, 3rd pers. sing., present, active, indicative.", analysis_morphologicus_zh: "動詞，第三人稱單數，現在時，主動語態，直陳法。" }
                         ]
-                    } 
+                    }
                 ] 
-            }, 
-            {                           
+            },
+            {
                 id_capituli: 3,
                 orationes: [
                     {
@@ -510,6 +510,7 @@ const corpus = {
                             { id_verbi: 'v12_24', terminus: 'adficiebantur.', analysis_morphologicus: "Verbo, 3ª pers. plural, imperfecto, pasivo, indicativo.", analysis_morphologicus_en: "Verb, 3rd pers. plural, imperfect, passive, indicative.", analysis_morphologicus_zh: "動詞，第三人稱複數，未完成時，被動語態，直陳法。" }
                         ]
                     },
+                    // --- ORATIO 13 ---
                     {
                         id_orationis: 'o13',
                         textus_originalis: "Pro multitudine autem hominum et pro gloria belli atque fortitudinis angustos se fines habere arbitrabantur, qui in longitudinem milia passuum CCXL, in latitudinem CLXXX patebant.",
@@ -550,10 +551,10 @@ const corpus = {
                             { id_verbi: 'v13_24', terminus: 'CLXXX', analysis_morphologicus: "Numeral.", analysis_morphologicus_en: "Numeral.", analysis_morphologicus_zh: "數詞。" },
                             { id_verbi: 'v13_25', terminus: 'patebant.', analysis_morphologicus: "Verbo, 3ª pers. plural, imperfecto, activo, indicativo.", analysis_morphologicus_en: "Verb, 3rd pers. plural, imperfect, active, indicative.", analysis_morphologicus_zh: "動詞，第三人稱複數，未完成時，主動語態，直陳法。" }
                         ]
-                    } 
-                ] 
-            }, 
-            {                                           
+                    }
+                ]    
+            },
+            {
                 id_capituli: 4,
                 orationes: [
                     {
@@ -759,11 +760,9 @@ const corpus = {
                             { id_verbi: 'v18_58', terminus: 'suam', analysis_morphologicus: 'Adjetivo posesivo, femenino, singular, acusativo.', analysis_morphologicus_en: 'Possessive adjective, feminine, singular, accusative.', analysis_morphologicus_zh: '物主形容詞，陰性，單數，賓格。' },
                             { id_verbi: 'v18_59', terminus: 'in', analysis_morphologicus: 'Preposición. Rige acusativo (finalidad).', analysis_morphologicus_en: 'Preposition. Governs accusative (purpose).', analysis_morphologicus_zh: '介詞。支配賓格（目的）。' },
                             { id_verbi: 'v18_60', terminus: 'matrimonium', analysis_morphologicus: 'Sustantivo, neutro, singular, acusativo.', analysis_morphologicus_en: 'Noun, neuter, singular, accusative.', analysis_morphologicus_zh: '名詞，中性，單數，賓格。' },
-                            { id_verbi: 'v18_61', terminus: 'dat.', analysis_morphologicus: 'Verbo, 3ª persona, singular, presente de indicativo activo.', analysis_morphologicus_en: 'Verb, 3rd person, singular, present indicative active.', analysis_morphologicus_zh: '動詞，第三人稱，單數，現在時直陳主動語態。' }     
-              ]
+                            { id_verbi: 'v18_61', terminus: 'dat.', analysis_morphologicus: 'Verbo, 3ª persona, singular, presente de indicativo activo.', analysis_morphologicus_en: 'Verb, 3rd person, singular, present indicative active.', analysis_morphologicus_zh: '動詞，第三人稱，單數，現在時直陳主動語態。' }
+                        ]
+                    }
+                ]
             }
-          ]
-        }
-      ]
-    }
-};
+        };             
