@@ -21,8 +21,13 @@ const corpus = {
         }
     },
     textus: {
+
+    textus: {
         id: 1,
-        orationes: [
+        capitula: [
+            {
+                id_capituli: 1,
+                orationes: [
             {
                 id_orationis: 'o1',
                 textus_originalis: "Gallia est omnis divisa in partes tres, quarum unam incolunt Belgae, aliam Aquitani, tertiam qui ipsorum lingua Celtae, nostra Galli appellantur.",
@@ -319,6 +324,8 @@ const corpus = {
                 ]
             },
             {
+                id_capituli: 2,
+                orationes: [
                 id_orationis: 'o9',
                 textus_originalis: "Apud Heluetios longe nobilissimus fuit et ditissimus Orgetorix.",
                 analysis_syntacticus: {
@@ -453,6 +460,8 @@ const corpus = {
                 ]
             },
             {
+                id_capituli: 3,
+                orationes: [
                 id_orationis: 'o12',
                 textus_originalis: "His rebus fiebat ut et minus late uagarentur et minus facile finitimis bellum inferre possent; qua ex parte homines bellandi cupidi magno dolore adficiebantur.",
                 analysis_syntacticus: {
@@ -534,6 +543,8 @@ const corpus = {
                 ]
             },
             {
+                id_capituli: 4,
+                orationes: [
                 id_orationis: 'o14',
                 textus_originalis: "His rebus adducti et auctoritate Orgetorigis permoti constituerunt ea quae ad proficiscendum pertinerent comparare, iumentorum et carrorum quam maximum numerum coemere, sementes quam maximas facere, ut in itinere copia frumenti suppeteret, cum proximis ciuitatibus pacem et amicitiam confirmare.",
                 analysis_syntacticus: {
